@@ -1,0 +1,31 @@
+{
+  "model": "LightGCN",
+  "test_result": {
+    "recall@1": 0.0783,
+    "recall@5": 0.2123,
+    "recall@10": 0.2979,
+    "mrr@1": 0.0864,
+    "mrr@5": 0.1353,
+    "mrr@10": 0.1466,
+    "ndcg@1": 0.0864,
+    "ndcg@5": 0.1503,
+    "ndcg@10": 0.178,
+    "hit@1": 0.0864,
+    "hit@5": 0.2266,
+    "hit@10": 0.3124,
+    "precision@1": 0.0864,
+    "precision@5": 0.0481,
+    "precision@10": 0.0339
+  },
+  "hit_rate@1": 0.0864,
+  "hit_rate@5": 0.2266,
+  "hit_rate@k": 0.3124,
+  "hit_rate@10": 0.3124,
+  "recall@1": 0.0783,
+  "recall@5": 0.2123,
+  "recall@k": 0.2979,
+  "recall@10": 0.2979,
+  "mrr": 0.1466,
+  "ndcg@k": 0.178,
+  "ndcg@10": 0.178
+}

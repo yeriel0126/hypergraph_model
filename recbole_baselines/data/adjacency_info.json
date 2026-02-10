@@ -1,0 +1,8 @@
+{
+  "n_perfumers": 5673,
+  "n_ingredients": 2985,
+  "n_edges_train": 332176,
+  "n_edges_valid": 41522,
+  "n_edges_test": 41523,
+  "seed": 2024
+}

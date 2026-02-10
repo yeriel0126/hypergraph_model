@@ -1,0 +1,15 @@
+# Step 3: HGCF 전용 — 하이퍼볼릭 곡률(c) 설정
+#
+# 사용자님 쪽 하이퍼볼릭 모델과 동일한 곡률을 쓰면 비교가 공정합니다.
+# train_hyperbolic_hypergraph.py 기본값: c=0.4 (learnable_curvature=True)
+#
+# HGCF(별도 구현)를 돌릴 때 참고:
+#   - 동일 비교용 권장: c = 0.4
+#   - 논문/공식 구현 기본값을 쓰고 싶다면 해당 레포의 default 사용 후, c=0.4 실험도 추가 권장
+#
+# Poincaré ball 곡률: c가 클수록 공간이 더 굽음. 0.2~0.5 구간을 쓰는 경우가 많음.
+
+curvature: 0.4
+# 사용 예 (Python):
+#   from geoopt import PoincareBall
+#   manifold = PoincareBall(c=0.4)

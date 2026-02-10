@@ -1,0 +1,6 @@
+# RecBole 베이스라인 실험용 (LightGCN, BPR 등)
+# scipy 1.14+ 시 run_baselines.py에서 dok_matrix._update 런타임 패치 적용
+recbole>=1.1.0
+kmeans_pytorch
+lightgbm
+xgboost

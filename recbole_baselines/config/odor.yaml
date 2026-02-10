@@ -1,0 +1,44 @@
+# RecBole 설정: odor-pair 데이터 (레시피→블렌더 추천)
+# train/valid/test는 이미 prepare_recbole_data.py로 part1/part2/part3로 분리됨
+# 공정 비교: 하이퍼볼릭과 동일 세팅 (embed_size=128, full ranking, seed=42)
+
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+
+# 하이퍼볼릭 embed_dim=128과 동일 (저차원에서 계층 구조 비교)
+embed_size: 128
+
+load_col:
+  inter: [user_id, item_id]
+
+# 미리 나눈 train / valid / test 파일 사용 (benchmark split)
+benchmark_filename: [part1, part2, part3]
+
+# 필터링 없음 (이미 분할된 데이터)
+user_inter_num_interval: "[0,inf)"
+item_inter_num_interval: "[0,inf)"
+
+# 평가: 하이퍼볼릭 모델과 동일 지표 (HR@K, MRR, NDCG@K)
+eval_args:
+  mode: full
+  group_by: user
+  order: RO
+metrics: ['Recall', 'MRR', 'NDCG', 'Hit']
+topk: [1, 5, 10]
+valid_metric: NDCG@10
+metric_decimal_place: 4
+
+# 학습
+epochs: 200
+train_batch_size: 2048
+learner: adam
+learning_rate: 0.001
+eval_step: 1
+stopping_step: 15
+# 하이퍼볼릭 train_hyperbolic_hypergraph.py RANDOM_SEED=42 와 동일
+seed: 42
+
+# 조기 종료
+checkpoint_dir: saved
+save_dataset: False
+save_dataloaders: False

@@ -1,0 +1,17 @@
+{
+  "model": "CML_Euclidean",
+  "hit_rate@1": 0.019470128022759603,
+  "hit_rate@5": 0.07734708392603129,
+  "hit_rate@k": 0.12135490753911807,
+  "hit_rate@10": 0.12135490753911807,
+  "recall@1": 0.019470128022759603,
+  "recall@5": 0.06587356684532827,
+  "recall@k": 0.10275665941345605,
+  "recall@10": 0.10275665941345605,
+  "mrr": 0.0447932542504911,
+  "ndcg@k": 0.05510176990935841,
+  "ndcg@10": 0.05510176990935841,
+  "embed_dim": 128,
+  "seed": 42,
+  "dataset_dir": "/Users/sinhuiyeong/Desktop/odor-pair/odor-pair/newcode2/hyperbolic_model/results/checkpoints/datasets"
+}
