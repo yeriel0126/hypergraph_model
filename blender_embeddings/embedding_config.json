@@ -1,0 +1,11 @@
+{
+  "embedding_dim": 128,
+  "output_dim": 256,
+  "aggregation_methods": [
+    "mean",
+    "max",
+    "attention",
+    "weighted"
+  ],
+  "vocab_size": 5673
+}
